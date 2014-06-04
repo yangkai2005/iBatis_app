@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap     
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"     
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap id="">
+	<selectid = getProduct ” parameterClass=”
+		com.ibatis.example.Product ” resultClass=”com.ibatis.example.Product”>
+		select
+		PRD_ID as id,
+		PRD_DESCRIPTION as description
+		from PRODUCT
+		where
+		PRD_ID =#id#
+	</select>
+</sqlMap>

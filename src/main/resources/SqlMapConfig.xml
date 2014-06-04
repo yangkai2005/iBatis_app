@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig 
+	PUBLIC "-//iBATIS.com//DTD SQL Map Config2.0//EN" 
+	"http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<properties resource="SqlMapConfigExample.properties" />
+
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="32" maxSessions="10"
+		maxTransactions="5" useStatementNamespaces="true" />
+
+
+	<transactionManager type="JDBC">
+		<dataSource type="DBCP">
+			<propertyname = "JDBC.Driver" value="${jdbc.driver}" />
+			<propertyname = "JDBC.ConnectionURL" value="${jdbc.url}" />
+			<propertyname = "JDBC.Username" value="${jdbc.username}" />
+			<propertyname = "JDBC.Password" value="${jdbc.password}" />
+		</datasource>
+	</transactionManager>
+	
+	<sqlMap resource = "net/jee/app/sqlmap/info.xml" />
+	
+</sqlMapConfig>
